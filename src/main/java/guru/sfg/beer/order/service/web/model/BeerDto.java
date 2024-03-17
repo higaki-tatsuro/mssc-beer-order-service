@@ -1,11 +1,11 @@
 package guru.sfg.beer.order.service.web.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Positive;
 import lombok.*;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Null;
-import javax.validation.constraints.Positive;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
@@ -19,18 +19,18 @@ public class BeerDto implements Serializable {
 
     static final long serialVersionUID = -9041199281667911180L;
 
-    @Null
+    @Nullable
     private UUID id;
 
-    @Null
+    @Nullable
     private Integer version;
 
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ssZ")
-    @Null
+    @Nullable
     private OffsetDateTime createDate;
 
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ssZ")
-    @Null
+    @Nullable
     private OffsetDateTime lastModifiedDate;
 
     @NotBlank
