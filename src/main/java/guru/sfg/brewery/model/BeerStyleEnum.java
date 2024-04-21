@@ -1,4 +1,4 @@
-package guru.sfg.beer.order.service.web.model;
+package guru.sfg.brewery.model;
 
 public enum BeerStyleEnum {
     LAGER,
