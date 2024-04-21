@@ -20,7 +20,7 @@ public class ValidationResultListener {
     @JmsListener(destination = JmsConfig.VALIDATE_ORDER_RESPONSE_QUEUE)
     public void listen(ValidateOrderResult validateOrderResult){
         final UUID orderId = validateOrderResult.getOrderId();
-        log.debug("Validatio Result for Order Id: " + orderId);
+        log.debug("Validation Result for Order Id: " + orderId);
 
         // イベント通知用メソッドをコール
         beerOrderManager.processValidationResult(orderId, validateOrderResult.getIsValid());

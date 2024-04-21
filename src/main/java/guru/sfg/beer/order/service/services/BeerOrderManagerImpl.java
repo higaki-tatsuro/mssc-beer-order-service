@@ -48,6 +48,10 @@ public class BeerOrderManagerImpl implements BeerOrderManager {
 
         if(isValid){
             sendBeerOrderEvent(beerOrder, BeerOrderEventEnum.VALIDATION_PASSED);
+
+            // イベント発生によりStateMachineの状態が更新されるため、最新の状態を取得するためにDBアクセスを行う
+            BeerOrder validatedOrder = repository.findOneById(beerOrderId);
+            sendBeerOrderEvent(validatedOrder, BeerOrderEventEnum.ALLOCATION_ORDER);
         }else{
             sendBeerOrderEvent(beerOrder, BeerOrderEventEnum.VALIDATION_FAILED);
         }
