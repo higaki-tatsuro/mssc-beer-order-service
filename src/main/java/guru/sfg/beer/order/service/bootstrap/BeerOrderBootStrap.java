@@ -12,7 +12,7 @@ import java.util.UUID;
  * Created by jt on 2019-06-06.
  */
 @RequiredArgsConstructor
-@Component
+//@Component
 public class BeerOrderBootStrap implements CommandLineRunner {
     public static final String TASTING_ROOM = "Tasting Room";
     public static final String BEER_1_UPC = "0631234200036";

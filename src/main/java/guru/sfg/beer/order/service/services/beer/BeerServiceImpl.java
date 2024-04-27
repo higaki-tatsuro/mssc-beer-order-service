@@ -13,8 +13,8 @@ import java.util.UUID;
 @Service
 public class BeerServiceImpl implements BeerService{
 
-    private final String BEER_PATH_V1 = "/api/v1/beer/";
-    private final String BEER_UPC_PATH_V1 = "/api/v1/beer/beerUpc";
+    public final static String BEER_PATH_V1 = "/api/v1/beer/";
+    public final static String BEER_UPC_PATH_V1 = "/api/v1/beer/beerUpc/";
 
     private final RestTemplate restTemplate;
 
